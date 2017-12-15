@@ -21,7 +21,7 @@ class PremproxySpider(scrapy.Spider):
 
 
         # Iterate through Proxy list and create ProxiesItems
-        selectors = response.xpath('//tbody/tr[@class="anon"]')
+        selectors = response.xpath('//tbody/tr')
         for selector in selectors:
             yield self.parse_item(selector, response)
 
